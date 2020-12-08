@@ -1,0 +1,64 @@
+{
+  "repositories": [
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.9.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9NDUxMzN8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTQtMTEtMjcgMDQ6MTg6MDk="
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^4.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "klyp/hummingbird",
+        "version": "0.0.4",
+        "type": "wordpress-theme",
+        "source": {
+          "url": "git@github.com:klyp/hummingbird.git",
+          "type": "git",
+          "reference": "tags/v0.0.4"
+        }
+      }
+    }
+  ],
+  "require": {
+    "composer/installers": "^1.4",
+    "ffraenz/private-composer-installer": "^4.0",
+    "johnpbloch/wordpress": "*",
+    "klyp/hummingbird": "0.0.4",
+    "vlucas/phpdotenv": "^4.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/duplicate-post":"*"
+  },
+  "extra": {
+    "installer-paths": {
+      "public_html/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "cp -r wordpress/* public_html/ && rm -r wordpress/",
+      "cp wp-config-env.php public_html/wp-config.php"
+    ],
+    "post-update-cmd": [
+      "cp -r wordpress/* public_html/ && rm -r wordpress/",
+      "cp wp-config-env.php public_html/wp-config.php"
+    ]
+  }
+}
