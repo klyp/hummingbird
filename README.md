@@ -1,7 +1,6 @@
 # Project Setup
 
-1. Git clone this repo
-2. Delete .git and init git again for new project
+Run ``composer create-project klyp/hummingbird`` to start a project
 
 # General Installation
 

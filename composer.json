@@ -1,4 +1,25 @@
 {
+  "name": "klyp/hummingbird-project",
+  "description": "WordPress project setup with Klyp hummingbird theme",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/klyp/hummingbird-composer",
+  "authors": [
+    {
+      "name": "Klyp Devteam",
+      "email": "devteam@klyp.co",
+      "homepage": "https://klyp.co"
+    }
+  ],
+  "keywords": ["wordpress"],
+  "support": {
+    "issues": "https://github.com/klyp/hummingbird-composer/issues"
+  },
+  "suggest": {
+    "composer/installers": "~1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  },
   "repositories": [
     {
       "type":"composer",
@@ -12,7 +33,7 @@
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9NDUxMzN8dHlwZT1wZXJzb25hbHxkYXRlPTIwMTQtMTEtMjcgMDQ6MTg6MDk="
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -34,7 +55,13 @@
       }
     }
   ],
+  "autoload": {
+    "classmap": [
+      "pre-install.php"
+    ]
+  },
   "require": {
+    "php": ">=7.1.0",
     "composer/installers": "^1.4",
     "ffraenz/private-composer-installer": "^4.0",
     "johnpbloch/wordpress": "*",
@@ -52,6 +79,15 @@
     }
   },
   "scripts": {
+    "pre-install-cmd": [
+      "Klyp\\Script::preInstall"
+    ],
+    "pre-update-cmd": [
+      "Klyp\\Script::preInstall"
+    ],
+    "post-create-project-cmd": [
+      "Klyp\\Script::preInstall"
+    ],
     "post-install-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php"
