@@ -1,5 +1,5 @@
 {
-  "name": "klyp/hummingbird-project",
+  "name": "klyp/hummingbird",
   "description": "WordPress project setup with Klyp hummingbird theme",
   "license": "GPL-2.0-only",
   "homepage": "https://github.com/klyp/hummingbird-composer",
@@ -15,7 +15,7 @@
     "issues": "https://github.com/klyp/hummingbird-composer/issues"
   },
   "suggest": {
-    "composer/installers": "~1.0"
+    "composer/installers": "^1.4"
   },
   "require-dev": {
     "phpunit/phpunit": "^7"
@@ -40,19 +40,6 @@
           "ffraenz/private-composer-installer": "^4.0"
         }
       }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "klyp/hummingbird",
-        "version": "0.0.4",
-        "type": "wordpress-theme",
-        "source": {
-          "url": "git@github.com:klyp/hummingbird.git",
-          "type": "git",
-          "reference": "tags/v0.0.4"
-        }
-      }
     }
   ],
   "autoload": {
@@ -65,7 +52,7 @@
     "composer/installers": "^1.4",
     "ffraenz/private-composer-installer": "^4.0",
     "johnpbloch/wordpress": "*",
-    "klyp/hummingbird": "0.0.4",
+    "klyp/hummingbird-theme": "*",
     "vlucas/phpdotenv": "^4.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
@@ -90,11 +77,13 @@
     ],
     "post-install-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
-      "cp wp-config-env.php public_html/wp-config.php"
+      "cp wp-config-env.php public_html/wp-config.php",
+      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird"
     ],
     "post-update-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
-      "cp wp-config-env.php public_html/wp-config.php"
+      "cp wp-config-env.php public_html/wp-config.php",
+      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird"
     ]
   }
 }
