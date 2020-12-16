@@ -72,9 +72,6 @@
     "pre-update-cmd": [
       "Klyp\\Script::preInstall"
     ],
-    "post-create-project-cmd": [
-      "Klyp\\Script::preInstall"
-    ],
     "post-install-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
@@ -83,6 +80,7 @@
     "post-update-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
+      "rm -r public_html/wp-content/themes/hummingbird",
       "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird"
     ]
   }
