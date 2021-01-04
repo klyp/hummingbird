@@ -15,7 +15,7 @@
     "issues": "https://github.com/klyp/hummingbird-composer/issues"
   },
   "suggest": {
-    "composer/installers": "^1.4"
+    "composer/installers": "^1.9.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^7"
@@ -36,8 +36,8 @@
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}"
         },
         "require": {
-          "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^4.0"
+          "composer/installers": "^1.9.0",
+          "ffraenz/private-composer-installer": "^5.0"
         }
       }
     }
@@ -49,12 +49,12 @@
   },
   "require": {
     "php": ">=7.1.0",
-    "composer/installers": "^1.4",
-    "ffraenz/private-composer-installer": "^4.0",
+    "composer/installers": "^1.9.0",
+    "ffraenz/private-composer-installer": "^5.0",
     "johnpbloch/wordpress": "*",
     "klyp/hummingbird-theme": "*",
     "vlucas/phpdotenv": "^4.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.3",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/duplicate-post":"*"
