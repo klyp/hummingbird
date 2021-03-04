@@ -1,0 +1,13 @@
+/*
+Theme Name:   {PROJECT_NAME}
+Theme URI:    https://klyp.co/
+Description:  {PROJECT_NAME} Theme
+Author:       Klyp
+Author URI:   https://klyp.co/
+Template:     hummingbird
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         klyp
+Text Domain:  {PROJECT_DOMAIN_TEXT}
+*/

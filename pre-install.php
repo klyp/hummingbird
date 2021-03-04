@@ -128,6 +128,42 @@ class Script
             echo '.env file exists, skipping...' . "\n";
         }
     }
+
+    public static function postInstall(Event $event)
+    {
+        // Create child theme
+        $io = $event->getIO();
+        $wpProjectStylesContent = file_get_contents('styles.css.example');
+        $wpProjectStyles = array (
+            '{PROJECT_NAME}',
+            '{PROJECT_DOMAIN_TEXT}'
+        );
+
+        $projectName = false;
+        // Make sure project name is created
+        while (! $projectName) {
+            $projectName = $io->ask('Please enter project name: ');
+        }
+        $projectSlug = slugify($projectName);
+        $wpProjectStylesReplace[] = $projectName;
+        $wpProjectStylesReplace[] = $projectSlug;
+        
+        // replace
+        $wpProjectStylesContent = str_replace($wpProjectStyles , $wpProjectStylesReplace, $wpProjectStylesContent);
+
+        // Create child theme folder
+        if (! file_exists('public_html/wp-content/themes/' . $projectSlug . '/styles.css')) {
+            mkdir('public_html/wp-content/themes/' . $projectSlug, 0755);
+        }
+
+        $result = file_put_contents('public_html/wp-content/themes/' . $projectSlug . '/styles.css', $wpProjectStylesContent);
+
+        if ($result) {
+            echo 'Project creation is complete.' . "\n";
+        } else {
+            echo 'Something went wrong, please try again.' . "\n";
+        }
+    }
 }
 /**
 * Function to generate random string.
@@ -137,4 +173,36 @@ class Script
 function getRandomString($length = 8)
 {
     return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)))), 1, $length);
+}
+
+/**
+ * Function to slugify a string
+ * @param string
+ * @return string
+ */
+function slugify($text)
+{
+  // replace non letter or digits by -
+  $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+  // transliterate
+  $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+  // remove unwanted characters
+  $text = preg_replace('~[^-\w]+~', '', $text);
+
+  // trim
+  $text = trim($text, '-');
+
+  // remove duplicate -
+  $text = preg_replace('~-+~', '-', $text);
+
+  // lowercase
+  $text = strtolower($text);
+
+  if (empty($text)) {
+    return 'n-a';
+  }
+
+  return $text;
 }
