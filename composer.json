@@ -29,7 +29,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.4",
+        "version": "5.9.5",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -54,10 +54,13 @@
     "johnpbloch/wordpress": "*",
     "klyp/hummingbird-theme": "*",
     "vlucas/phpdotenv": "^4.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.4",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.5",
+    "wpackagist-plugin/acf-field-for-contact-form-7": "*",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
     "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/duplicate-post":"*"
+    "wpackagist-plugin/duplicate-post":"*",
+    "klyp/klyp-cf7-to-hubspot":"*",
+    "tinify/tinify":"*"
   },
   "extra": {
     "installer-paths": {
@@ -75,13 +78,18 @@
     "post-install-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
-      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird"
+      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird",
+      "rm -rf public_html/wp-content/themes/twenty*/"
     ],
     "post-update-cmd": [
       "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
-      "rm -r public_html/wp-content/themes/hummingbird",
-      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird"
+      "rm -rf public_html/wp-content/themes/hummingbird",
+      "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird",
+      "rm -rf public_html/wp-content/themes/twenty*/"
+    ],
+    "post-create-project-cmd": [
+      "Klyp\\Script::postInstall"
     ]
   }
 }
