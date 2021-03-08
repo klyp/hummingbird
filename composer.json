@@ -55,6 +55,7 @@
     "klyp/hummingbird-theme": "*",
     "vlucas/phpdotenv": "^4.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.5",
+    "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/acf-field-for-contact-form-7": "*",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
     "wpackagist-plugin/wordpress-seo": "*",
