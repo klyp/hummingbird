@@ -156,7 +156,7 @@ class Script
             mkdir('public_html/wp-content/themes/' . $projectSlug, 0755);
         }
 
-        $result = file_put_contents('public_html/wp-content/themes/' . $projectSlug . '/styles.css', $wpProjectStylesContent);
+        $result = file_put_contents('public_html/wp-content/themes/' . $projectSlug . '/style.css', $wpProjectStylesContent);
 
         if ($result) {
             echo 'Project creation is complete.' . "\n";
