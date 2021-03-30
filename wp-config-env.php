@@ -43,6 +43,9 @@ define('DB_CHARSET', $_ENV['DB_CHARSET']);
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', $_ENV['DB_COLLATE']);
 
+/** The Number of revisions to keep. Don't change this if in doubt. */
+define('WP_POST_REVISIONS', 10, true);
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
