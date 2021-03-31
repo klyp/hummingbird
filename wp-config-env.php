@@ -43,9 +43,6 @@ define('DB_CHARSET', $_ENV['DB_CHARSET']);
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', $_ENV['DB_COLLATE']);
 
-/** The Number of revisions to keep. Don't change this if in doubt. */
-define('WP_POST_REVISIONS', 10, true);
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -87,6 +84,8 @@ $table_prefix = $_ENV['DB_PREFIX'];
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', (bool) $_ENV['WP_DEBUG']);
+define('WP_DEBUG_DISPLAY', (bool) $_ENV['WP_DEBUG_DISPLAY']);
+define('WP_DEBUG_LOG', (bool) $_ENV['WP_DEBUG_LOG']);
 
 /* That's all, stop editing! Happy publishing. */
 
