@@ -67,8 +67,7 @@
     "installer-paths": {
       "public_html/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
       "public_html/wp-content/themes/{$name}/": ["type:wordpress-theme"]
-    },
-    "wordpress-install-dir": "public_html"
+    }
   },
   "scripts": {
     "pre-install-cmd": [
@@ -78,12 +77,14 @@
       "Klyp\\Script::preInstall"
     ],
     "post-install-cmd": [
+      "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
       "rm -rf public_html/wp-content/themes/hummingbird",
       "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird",
       "rm -rf public_html/wp-content/themes/twenty*/"
     ],
     "post-update-cmd": [
+      "cp -r wordpress/* public_html/ && rm -r wordpress/",
       "cp wp-config-env.php public_html/wp-config.php",
       "rm -rf public_html/wp-content/themes/hummingbird",
       "mv public_html/wp-content/themes/hummingbird-theme public_html/wp-content/themes/hummingbird",
