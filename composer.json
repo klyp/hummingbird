@@ -29,7 +29,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.5",
+        "version": "5.9.6",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -54,7 +54,7 @@
     "johnpbloch/wordpress": "*",
     "klyp/hummingbird-theme": "*",
     "vlucas/phpdotenv": "^4.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.5",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.6",
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/acf-field-for-contact-form-7": "*",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
