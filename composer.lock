@@ -386,16 +386,16 @@
         },
         {
             "name": "klyp/hummingbird-theme",
-            "version": "v0.0.25",
+            "version": "v0.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/klyp/hummingbird-theme.git",
-                "reference": "fb415d04ec844a489d0f56c39535338f7df6a19f"
+                "reference": "ee44379db648d67494681adb54a1cff13e7db6ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/klyp/hummingbird-theme/zipball/fb415d04ec844a489d0f56c39535338f7df6a19f",
-                "reference": "fb415d04ec844a489d0f56c39535338f7df6a19f",
+                "url": "https://api.github.com/repos/klyp/hummingbird-theme/zipball/ee44379db648d67494681adb54a1cff13e7db6ad",
+                "reference": "ee44379db648d67494681adb54a1cff13e7db6ad",
                 "shasum": ""
             },
             "type": "wordpress-theme",
@@ -405,9 +405,9 @@
             ],
             "support": {
                 "issues": "https://github.com/klyp/hummingbird-theme/issues",
-                "source": "https://github.com/klyp/hummingbird-theme/tree/v0.0.25"
+                "source": "https://github.com/klyp/hummingbird-theme/tree/v0.0.26"
             },
-            "time": "2021-05-31T05:49:30+00:00"
+            "time": "2021-06-09T04:04:45+00:00"
         },
         {
             "name": "klyp/klyp-cf7-to-hubspot",
@@ -827,15 +827,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "16.3",
+            "version": "16.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/16.3"
+                "reference": "tags/16.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1684,16 +1684,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.4",
+            "version": "9.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741"
+                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c73c6737305e779771147af66c96ca6a7ed8a741",
-                "reference": "c73c6737305e779771147af66c96ca6a7ed8a741",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89ff45ea9d70e35522fb6654a2ebc221158de276",
+                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276",
                 "shasum": ""
             },
             "require": {
@@ -1723,7 +1723,7 @@
                 "sebastian/global-state": "^5.0.1",
                 "sebastian/object-enumerator": "^4.0.3",
                 "sebastian/resource-operations": "^3.0.3",
-                "sebastian/type": "^2.3",
+                "sebastian/type": "^2.3.2",
                 "sebastian/version": "^3.0.2"
             },
             "require-dev": {
@@ -1771,7 +1771,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.4"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.5"
             },
             "funding": [
                 {
@@ -1783,7 +1783,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-23T07:16:29+00:00"
+            "time": "2021-06-05T04:49:07+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -2642,16 +2642,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "81cd61ab7bbf2de744aba0ea61fae32f721df3d2"
+                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/81cd61ab7bbf2de744aba0ea61fae32f721df3d2",
-                "reference": "81cd61ab7bbf2de744aba0ea61fae32f721df3d2",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/0d1c587401514d17e8f9258a27e23527cb1b06c1",
+                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1",
                 "shasum": ""
             },
             "require": {
@@ -2686,7 +2686,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/2.3.1"
+                "source": "https://github.com/sebastianbergmann/type/tree/2.3.2"
             },
             "funding": [
                 {
@@ -2694,7 +2694,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-26T13:18:59+00:00"
+            "time": "2021-06-04T13:02:07+00:00"
         },
         {
             "name": "sebastian/version",
