@@ -15,7 +15,7 @@
     "issues": "https://github.com/klyp/hummingbird-composer/issues"
   },
   "suggest": {
-    "composer/installers": "^1.9.0"
+    "composer/installers": "^2.2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9"
@@ -29,14 +29,14 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.6",
+        "version": "6.0.7",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}"
         },
         "require": {
-          "composer/installers": "^1.9.0",
+          "composer/installers": "^2.2.0",
           "ffraenz/private-composer-installer": "^5.0"
         }
       }
@@ -49,12 +49,12 @@
   },
   "require": {
     "php": ">=7.1.0",
-    "composer/installers": "^1.9.0",
+    "composer/installers": "^2.2.0",
     "ffraenz/private-composer-installer": "^5.0",
     "johnpbloch/wordpress": "*",
     "klyp/hummingbird-theme": "*",
-    "vlucas/phpdotenv": "^4.0",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.6",
+    "vlucas/phpdotenv": "^5.5.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/acf-field-for-contact-form-7": "*",
     "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
@@ -93,5 +93,12 @@
     "post-create-project-cmd": [
       "Klyp\\Script::postInstall"
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "ffraenz/private-composer-installer": true,
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true
+    }
   }
 }
